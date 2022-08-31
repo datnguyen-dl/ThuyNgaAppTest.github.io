@@ -1,0 +1,113 @@
+.bg_01 {
+  background-color: #232429;
+}
+
+.bg_02 {
+  background-color: #181A20;
+}
+
+.bg_03 {
+  background-color: #33353E;
+}
+
+:root {
+  --bs-warning-rgb: 255,215,53;
+  --bs-warning: #FFD735;
+  --bs-yellow: #FFD735;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  background-color: #232429;
+  color: #FAFAFA;
+}
+
+body {
+  font-size: 1rem;
+  --bs-border-color: #33353E;
+}
+
+*,
+body,
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.fs-7 {
+  font-size: 14px;
+}
+
+.form-control {
+  color: #FAFAFA;
+  background-color: #181A20;
+  border: 1px solid #181A20;
+}
+.form-control:focus {
+  color: #FAFAFA;
+  background-color: #181A20;
+  border-color: #ffc107;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.2);
+}
+
+.btn-code-deal-copy {
+  background-color: #33353E;
+  border-color: #33353E;
+  min-width: 75px;
+}
+
+.container {
+  max-width: 540px;
+}
+
+.main {
+  padding-bottom: 100px;
+}
+.main .bottom-layout {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.tooltip-copy {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-copy .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-copy .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip-copy:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}/*# sourceMappingURL=index.css.map */

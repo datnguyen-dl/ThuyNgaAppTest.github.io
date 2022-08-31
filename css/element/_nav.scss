@@ -1,0 +1,33 @@
+.navbar-dark {
+  &.bg-dark {
+    background-color: #181a20 !important;
+  }
+}
+
+.nav-pills-login {
+}
+
+.nav-pills {
+  --bs-nav-pills-border-radius: 0.375rem;
+  --bs-nav-pills-link-active-color: #ffc107;
+  --bs-nav-pills-link-active-bg: transparent;
+}
+
+.nav-link {
+  color: white;
+}
+
+// .nav-pills .nav-link.active,
+// .nav-pills .show > .nav-link {
+//   color: var(--bs-nav-pills-link-active-color);
+//   background-color: var(--bs-nav-pills-link-active-bg);
+// }
+// .nav-pills &.nav-pills-login {
+//   .nav-link {
+//   }
+// }
+
+// ======
+// .nav-link:focus, .nav-link:hover {
+//   color: var(--bs-nav-link-hover-color);
+// }

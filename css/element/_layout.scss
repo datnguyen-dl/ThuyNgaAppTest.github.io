@@ -1,0 +1,26 @@
+.main {
+}
+
+.footer-fix {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.top-bar {
+}
+
+.img-order {
+  position: relative;
+  width: 25%;
+  img {
+    width: 100%;
+  }
+}
+
+
+.container {
+  max-width: 540px;
+}

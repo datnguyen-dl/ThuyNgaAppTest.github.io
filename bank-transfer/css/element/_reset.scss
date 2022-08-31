@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    min-height: 100%;
+    background-color: $bgColor01;
+    color: $Color01;
+}
+
+
+body{
+font-size: 1rem;
+
+--bs-border-color: #33353E;
+}
+

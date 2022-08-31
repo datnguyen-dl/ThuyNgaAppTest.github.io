@@ -1,0 +1,14 @@
+.container{
+    max-width: 540px;
+}
+.main{
+    padding-bottom: 100px;
+    .top-layout{}
+    .content-layout{}
+    .bottom-layout{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+}

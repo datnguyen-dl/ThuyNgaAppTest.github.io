@@ -1,0 +1,161 @@
+:root {
+  --bs-body-color: #fafafa;
+  --bs-body-bg: #232429;
+  --bs-body-line-height: 24px;
+  --bs-body-font-weight: 400;
+  --bs-body-font-size: 1rem;
+  --bs-border-color: rgb(70, 70, 70);
+}
+
+body {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+}
+
+.bg_01 {
+  background-color: #232429 !important;
+}
+
+.bg_02 {
+  background-color: #181a20 !important;
+}
+
+.bg_03 {
+  background-color: #33353e !important;
+}
+
+:root {
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-warning: #ffc107;
+  --bs-yellow: #ffc107;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.btn-code-deal-copy {
+  background-color: #33353e;
+  border-color: #33353e;
+  min-width: 75px;
+}
+
+.btn-icon {
+  background-color: transparent;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.btn-location-outline {
+  color: white;
+}
+.btn-location-outline:active {
+  border: 1px solid #ffc107;
+  color: #ffc107;
+}
+.btn-location-outline:focus, .btn-location-outline:hover {
+  background-color: transparent !important;
+  border: 1px solid #ffc107;
+  color: #ffc107;
+}
+
+.form-control {
+  color: #fafafa;
+  background-color: #232429;
+  border: 1px solid #232429;
+}
+.form-control:focus {
+  color: #fafafa;
+  background-color: #232429;
+  border-color: #ffc107;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.2);
+}
+
+.form-select {
+  color: #fafafa;
+  background-color: #232429;
+  border: 1px solid #232429;
+}
+.form-select:focus {
+  color: #fafafa;
+  background-color: #232429;
+  border-color: #ffc107;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.2);
+}
+
+.loginPhoneCode {
+  max-width: 70px;
+}
+
+.modal {
+  --bs-modal-bg: #212529;
+  --bs-modal-color: rgba(255, 255, 255, 0.9);
+  --bs-modal-header-border-color: #535353;
+  --bs-modal-footer-border-color: #535353;
+  --bs-modal-header-padding: 0.5rem 1rem;
+}
+.modal .btn-close {
+  background-image: none;
+  color: white;
+}
+
+.modal-body {
+  position: relative;
+}
+.modal-body > .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.modal-body > .bg img {
+  width: 100%;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal-body .wrap-modal {
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
+}
+.modal-body .wrap-modal > .content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 70vh;
+}
+.footer-fix {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.img-order {
+  position: relative;
+  width: 25%;
+}
+.img-order img {
+  width: 100%;
+}
+
+.container {
+  max-width: 540px;
+}/*# sourceMappingURL=tickets.css.map */

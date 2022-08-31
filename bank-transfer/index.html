@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Payment</title>
+    <!-- Font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://storage.tixlabs.io/assets/bootstrap@5.2.0/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <div class="main container px-0">
+      <!-- <div class="top-layout d-flex align-items-center bg_02 px-3 py-2">
+        <div>
+          <button class="btn btn-sm btn-dark">
+            <i class="fa-solid fa-copy"></i>
+          </button>
+        </div>
+        <div class="flex-fill text-center py-2">
+          <h4>Chuyển khoản ngân hàng</h4>
+        </div>
+      </div> -->
+      <div class="content-layout mb-5">
+        <div class="bg_03 p-1 text-center text-warning fs-7 px-3 mb-4">Đang giữ ghế, vui lòng thanh toán trong 4:00<span id="expireTime"></span></div>
+        <div class="text-center px-3 mb-4">
+          <div class="mb-1">Số tiền thanh toán</div>
+          <h1 class="text-warning"><span id="orderAmountRM">10.000.000</span> VND</h1>
+        </div>
+
+        <div class="px-3 mb-4">
+          <div class="border-bottom">
+            <div class="mb-4">
+              <label for="codeDealFormControlInput" class="form-label">Mã giao dịch</label>
+              <div class="input-group">
+                <input
+                  id="orderDescRM"
+                  type="text"
+                  class="form-control form-control-lg"
+                  placeholder="Nhập mã giao dịch"
+                  aria-label="Recipient's username"
+                  aria-describedby="codeDealFormControlInput"
+                  value="123AT234G6899"
+                  readonly
+                />
+                <button namecopy="orderDesc" class="btn btn-outline-warning btn-code-deal-copy tooltip-copy" type="button" id="codeDealFormControlInput" onclick="copyFn(this)">
+                  <i class="fa-solid fa-copy"></i>
+                  <span>Copy</span>
+                  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                </button>
+              </div>
+            </div>
+            <p class="text-white-50 mb-4">Quý khách vui lòng copy mã giao dịch và dán vào ô “Nội dung chuyển khoản” khi chuyển khoản qua các ngân hàng</p>
+            <ul class="text-danger mb-4">
+              <li>Quý khách cần chuyển đúng số tiền và nhập đúng mã giao dịch khi chuyển khoản.</li>
+              <li>Giao dịch mua vé sẽ không được xử lý nếu các thông tin không chính xác.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="px-3 mb-4">
+          <h6 class="text-white-50 fw-normal mb-3">Danh sách tài khoản ngân hàng:</h6>
+          <ol class="card-bank-list list-unstyled">
+            <li class="card-bank_item bg_02 rounded-3 overflow-hidden mb-4">
+              <div class="top">
+                <img class="d-block w-100" src="./img/banktransfer_vcb.png" alt="" />
+              </div>
+              <ul class="content list-unstyled p-3 text-white-50">
+                <li class="d-flex justify-content-between align-items-center mb-2">
+                  <div>Tên ngân hàng:</div>
+                  <div>Vietcombank</div>
+                </li>
+                <li class="d-flex justify-content-between align-items-center mb-2">
+                  <div>Chủ tài khoản:</div>
+                  <div>NGUYỄN Van A</div>
+                </li>
+                <li class="d-flex justify-content-between align-items-center mb-2" onclick="copy_data(this)">
+                  <div>Số tài khoản:</div>
+                  <div class="text-white">
+                    <span class="numb">0988523146</span>
+                    <button class="btn btn-sm btn-outline-warning border-0">
+                      <i class="fa-solid fa-copy"></i>
+                    </button>
+                  </div>
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <div>Chi nhánh:</div>
+                  <div>Ngân hàng Vietcombank - Chi Nhánh Đông Sài Gòn</div>
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+
+        <div class="px-3">
+          <h6>Lưu ý</h6>
+          <div class="text-white-50">
+            <p>Giao dịch sẽ tự động hoàn thành khi bạn chuyển tiền. Thời gian hoàn thành giao dịch trong khoảng 15 giây tới tối đa 5 phút, kể từ lúc bạn chuyển tiền xong.</p>
+            <p>Nếu sau 5 phút kể từ lúc chuyển tiền bạn vẫn chưa nhận được thông báo thành công, vui lòng liên hệ hỗ trợ hoặc gửi email đính kèm ảnh chụp lệnh chuyển tiền để được hỗ trợ trực tiếp.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-layout w-100">
+        <div class="container bg_02 w-100 p-3">
+          <!-- <button onclick="checkOrder()" class="btn btn-warning w-100">Kiểm tra đơn hàng</button> -->
+          <a href="../pages/Order/ConfirmOrder/comfirm-order.html" class="btn btn-warning w-100">Kiểm tra đơn hàng</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://storage.tixlabs.io/assets/bootstrap@5.2.0/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      let expireTime = urlParams.get("expireTime");
+      let orderAmount = urlParams.get("orderAmount");
+      let orderDesc = urlParams.get("orderDesc");
+      let orderId = urlParams.get("orderId");
+      document.querySelector("#orderAmount").innerHTML = String(orderAmount).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      document.querySelector("#orderDesc").value = orderDesc;
+      const expireTimeEl = document.querySelector("#expireTime");
+
+      let counterTime = expireTime - 1;
+      const interval = setInterval(timer, 1000);
+
+      function timer() {
+        if (counterTime <= 0) {
+          clearInterval(interval);
+          if (window.ReactNativeWebView) {
+            window.ReactNativeWebView.postMessage(
+              JSON.stringify({
+                action: "orderTimeout",
+                data: {
+                  orderId: orderId,
+                },
+              })
+            );
+          }
+          return;
+        }
+        counterTime -= 1;
+        expireTimeEl.innerHTML = convertSecondsToTimer(counterTime);
+      }
+
+      function convertSecondsToTimer(time) {
+        if (!time) return "0:00";
+        const hrs = ~~(time / 3600);
+        const mins = ~~((time % 3600) / 60);
+        const secs = ~~(time % 60);
+        let ret = "";
+        if (hrs > 0) ret += `${hrs}:${mins < 10 ? "0" : ""}`;
+        ret += `${mins}:${secs < 10 ? "0" : ""}`;
+        ret += `${secs}`;
+        return ret;
+      }
+
+      function copyFn(e) {
+        /* Get the text field */
+        var nameCopy = e.getAttribute("namecopy");
+        var copyText = document.getElementById(nameCopy);
+
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+        /* Copy the text inside the text field */
+        navigator.clipboard.writeText(copyText.value);
+
+        /* Alert the copied text */
+        // console.log("Copied the text: " + copyText.value);
+      }
+
+      function checkOrder() {
+        if (window.ReactNativeWebView) {
+          window.ReactNativeWebView.postMessage(
+            JSON.stringify({
+              action: "orderChecking",
+              data: {
+                orderId,
+                expireTime,
+                orderAmount,
+                orderDesc,
+              },
+            })
+          );
+        }
+      }
+    </script>
+
+    <script>
+      function copyFn(e) {
+        /* Get the text field */
+        var nameCopy = e.getAttribute("namecopy");
+        var copyText = document.getElementById(nameCopy);
+        copyText.select(); /* Select the text field */
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+        navigator.clipboard.writeText(copyText.value); // /* Copy the text inside the text field */
+        /* Alert the copied text */
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copied: " + copyText.value;
+      }
+
+      function outFunc() {
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copy to clipboard";
+      }
+    </script>
+  </body>
+</html>

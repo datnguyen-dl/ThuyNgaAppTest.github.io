@@ -1,0 +1,23 @@
+$bgColor01: #232429;
+$bgColor02: #181a20;
+$bgColor03: #33353e;
+
+$Color01: #fafafa;
+
+.bg_01 {
+  background-color: #232429 !important;
+}
+
+.bg_02 {
+  background-color: #181a20 !important;
+}
+
+.bg_03 {
+  background-color: #33353e !important;
+}
+
+:root {
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-warning: #ffc107;
+  --bs-yellow: #ffc107;
+}

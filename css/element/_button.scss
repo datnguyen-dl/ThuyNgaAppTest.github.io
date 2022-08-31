@@ -1,0 +1,25 @@
+.btn-code-deal-copy {
+  background-color: #33353e;
+  border-color: #33353e;
+  min-width: 75px;
+}
+
+.btn-icon {
+  background-color: transparent;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.btn-location-outline {
+  color: white;
+  &:active {
+    border: 1px solid #ffc107;
+    color: #ffc107;
+  }
+  &:focus,
+  &:hover {
+    background-color: transparent !important;
+    border: 1px solid #ffc107;
+    color: #ffc107;
+  }
+}

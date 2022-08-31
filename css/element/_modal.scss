@@ -1,0 +1,44 @@
+.modal {
+  --bs-modal-bg: #212529;
+  --bs-modal-color: rgba(255, 255, 255, 0.9);
+  --bs-modal-header-border-color: #535353;
+  --bs-modal-footer-border-color: #535353;
+  --bs-modal-header-padding: 0.5rem 1rem;
+  .btn-close {
+    background-image: none;
+    color: white;
+  }
+}
+
+.modal-body {
+  position: relative;
+  & > .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 50vh;
+      object-fit: cover;
+    }
+  }
+  .wrap-modal {
+    position: relative;
+    z-index: 1;
+    min-height: 100%;
+    & > .top {
+    }
+    & > .content {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      min-height: 70vh;
+    }
+    & > .bottom {
+    }
+  }
+}
